@@ -3,29 +3,28 @@
 #   Documentation: https://wowchemy.com/docs/guide/language/
 
 # Default language
-en:
-  languageCode: en-us
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  contentDir: content/en
+#   languageCode: en-us
+#   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
+#   contentDir: content/en
 
 # Uncomment the lines below to configure your website in a second language.
 zh:
  languageCode: zh
- contentDir: content/zh
- title: 中文标题
- params:
-   description: 网址描述
- menu:
-   main:
-    - name: 关于
-      url: '#about'
-      weight: 10
-    - name: 博客
-      url: '#posts'
-      weight: 20
-    - name: 项目
-      url: '#projects'
-      weight: 30
-    - name: 出版物
-      url: '#publications'
-      weight: 50
+#  contentDir: content/zh
+#  title: 中文标题
+#  params:
+#    description: 网址描述
+#  menu:
+#    main:
+#     - name: 关于
+#       url: '#about'
+#       weight: 10
+#     - name: 博客
+#       url: '#posts'
+#       weight: 20
+#     - name: 项目
+#       url: '#projects'
+#       weight: 30
+#     - name: 出版物
+#       url: '#publications'
+#       weight: 50
