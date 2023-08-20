@@ -18,17 +18,16 @@ role: Master of Computional Mathematics
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Stanford University
-    url: https://www.stanford.edu/
+  - name: xxx University
+    url: 
 
 # Short bio (displayed in user profile at end of posts)
 # bio: My research interests include distributed robotics, mobile computing and programmable matter.
 
 # Interests to show in About widget
-interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+# interests:
+#   - Numerical methods for the imcompressible Navier--Stokes equations
+#   - Semi--linear parabolic equation 
 
 # Education to show in About widget
 education:
@@ -41,16 +40,21 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:tangxiangong@gmail.com'
-  
+  - icon: orcid
+    icon_pack: ai
+    link: 'https://orcid.org/0000-0003-0935-4959'
+  - icon: researchgate
+    icon_pack: ai
+    link: 'https://www.researchgate.net/profile/Xiangong-Tang-2'  
   - icon: github
     icon_pack: fab
     link: https://github.com/tangxiangong/
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
-  - icon: cv
-    icon_pack: ai
-    link: uploads/resume.pdf
+  # - icon: cv
+  #   icon_pack: ai
+  #   link: uploads/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
