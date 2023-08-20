@@ -5,7 +5,6 @@ date: 2022-10-24
 type: landing
 
 sections:
-  
   - block: about.biography
     id: about
     content:
@@ -35,10 +34,11 @@ sections:
       offset: 0
       # Page order: descending (desc) or ascending (asc) date.
       order: desc
-    design:
+      design:
       # Choose a layout view
       view: compact
       columns: '2'
+
   - block: portfolio
     id: projects
     content:
@@ -61,8 +61,7 @@ sections:
         - name: Other
           tag: Demo
     design:
-      # Choose how many columns the section has. Valid values: '1' or '2'.
-      columns: '1'
+      # Choose how many columns the section has. Valid values: '1' or '2'.        columns: '1'
       view: showcase
       # For Showcase view, flip alternate rows?
       flip_alt_rows: false
