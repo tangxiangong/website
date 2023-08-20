@@ -9,7 +9,7 @@ appearance:
   theme_day: minimal
   theme_night: minimal
   font: minimal
-  font_size: M
+  font_size: L
 
 # SEO
 
@@ -35,7 +35,7 @@ header:
   navbar:
     enable: true
     align: l
-    show_logo: false
+    show_logo: true
     show_language: false
     show_day_night: true
     show_search: true
@@ -55,9 +55,9 @@ footer:
 # Localization
 
 locale:
-  date_format: '2006年 01 月 01 日, Mon'
-  time_format: '15:04'
-  address_format: zh
+  date_format: 'Jan 2, 2006'
+  time_format: '3:04 PM'
+  address_format: en-us
 
 # Site features
 
