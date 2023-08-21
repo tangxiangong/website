@@ -1,6 +1,6 @@
 ---
 # Leave the homepage title empty to use the site title
-title: XiangongTang$$
+title: Xiangong Tang
 date: 2022-10-24
 type: landing
 
