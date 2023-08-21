@@ -7,7 +7,7 @@
   translation: 目录
 
 - id: on_this_page
-  translation: 在本页
+  translation: Content
 
 - id: back_to_top
   translation: 回到顶部
@@ -209,7 +209,7 @@
 # Content types for default archive page titles and search results
 
 - id: posts
-  translation: 文章
+  translation: 博客
 
 - id: publications
   translation: 出版物
@@ -265,4 +265,6 @@
 # Published with
 
 - id: published_with
-  translation: 由{wowchemy}支持发布——免费{repo_link}开源{/repo_link}网站，为创作者赋能。
+  translation: ''
+  
+  #由{wowchemy}支持发布——免费{repo_link}开源{/repo_link}网站，为创作者赋能。
