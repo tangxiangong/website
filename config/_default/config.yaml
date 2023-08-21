@@ -1,9 +1,10 @@
+theme: "starter-hugo-academic"
 # Configuration of Hugo
 # Guide: https://wowchemy.com/docs/getting-started/
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Xiangong Tang's Website  # Website name
+title: Home  # Website name
 baseURL: 'https://tangxiangong.me/' # Website URL
 
 ############################
@@ -24,7 +25,7 @@ module:
     - path: github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-plugin-netlify-cms
     - path: github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-plugin-netlify
     - path: github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-plugin-reveal
-    - path: github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy/v5
+    - path: custom-wowchemy-theme
 
 ############################
 ## ADVANCED
