@@ -14,23 +14,31 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Master of Computional Mathematics
+role: Student in Computional Mathematics
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: xxx University
+  - name: Lanzhou University
     url: 
 
 # Short bio (displayed in user profile at end of posts)
-# bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include the numerical analysis and scientific computing for the PDEs.
 
 # Interests to show in About widget
 # interests:
-#   - Numerical methods for the imcompressible Navier--Stokes equations
-#   - Semi--linear parabolic equation 
+#  - Numerical methods for the
+#   incompressible Navier-Stokes equations
+#   semilinear time-fractional PDEs
+#   phase field models
+#   semilinear parabolic equations
+# Maximal $L^p$-regularity of the time discretization schemes for parabolic equations
+
 
 # Education to show in About widget
-education:
+# education: 
+#   course:
+#     - M.S., Computational Mathematics, Lanzhou University, 2020--2023. 
+#     - B.S., Mathematics, Lanzhou University, 2016--2020.
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -64,3 +72,17 @@ highlight_name: true
 ---
 
 个人简介
+
+## Education
+
+- M.S., Computational Mathematics, Lanzhou University, 2020--2023. 
+- B.S., Mathematics, Lanzhou University, 2016--2020. 
+
+## Research interests
+
+- Numerical methods for the
+  - incompressible Navier-Stokes equations
+  - semilinear time-fractional PDEs
+  - phase field models
+  - semilinear parabolic equations
+- Maximal $L^p$-regularity of the time discretization schemes for parabolic equations
