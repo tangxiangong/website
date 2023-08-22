@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6ff1f0a6dcb9bc75",
+        "id": "91d3d39d024f25ed",
         "type": "tabs",
         "children": [
           {
-            "id": "88aab7c2d00b0b2b",
+            "id": "a28c3b0e5f746f35",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "authors/admin/_index.md",
+                "file": "post/error-parabolic-minimal-regularity/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "authors/admin/_index.md",
+                "file": "post/error-parabolic-minimal-regularity/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "authors/admin/_index.md",
+                "file": "post/error-parabolic-minimal-regularity/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "authors/admin/_index.md"
+                "file": "post/error-parabolic-minimal-regularity/index.md"
               }
             }
           }
@@ -150,8 +150,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "88aab7c2d00b0b2b",
+  "active": "4ed72d8c9f674224",
   "lastOpenFiles": [
+    "publication/conference-paper/index.md",
+    "publication/conference-paper/featured.jpg",
+    "authors/admin/_index.md",
     "event/_index.md",
     "post/math-test.md"
   ]

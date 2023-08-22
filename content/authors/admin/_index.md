@@ -17,9 +17,9 @@ superuser: true
 role: Student in Computional Mathematics
 
 # Organizations/Affiliations to show in About widget
-organizations:
-  - name: Lanzhou University
-    url: 
+#organizations:
+ # - name: Lanzhou University
+ #   url: 
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include the numerical analysis and scientific computing for the PDEs.
