@@ -2,7 +2,6 @@
 {{- $site := $scr.Get "site" -}}
 {{/* Don't use partialCached as can error when admin changes theme config whilst `hugo server` is running. */}}
 {{- partial "functions/parse_theme" . -}}
-
 $sta-darken-percentage: 10%;
 $sta-lighten-percentage: 10%;
 
