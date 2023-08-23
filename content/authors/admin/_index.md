@@ -36,9 +36,9 @@ bio: My research interests include the numerical analysis and scientific computi
 
 # Education to show in About widget
 # education: 
-#   course:
-#     - M.S., Computational Mathematics, Lanzhou University, 2020--2023. 
-#     - B.S., Mathematics, Lanzhou University, 2016--2020.
+#   - M.S., Computational Mathematics, Lanzhou University, 2020--2023. 
+#   - B.S., Mathematics, Lanzhou University, 2016--2020. 
+
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -75,8 +75,8 @@ highlight_name: true
 
 ## Education
 
-- M.S., Computational Mathematics, Lanzhou University, 2020--2023. 
-- B.S., Mathematics, Lanzhou University, 2016--2020. 
+- M.S., Computational Mathematics, Lanzhou University, 2020--2023.  
+- B.S., Mathematics, Lanzhou University, 2016--2020.  
 
 ## Research interests
 
