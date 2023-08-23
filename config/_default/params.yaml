@@ -55,7 +55,7 @@ footer:
 # Localization
 
 locale:
-  date_format: '2006年 01 月 01 日, Mon'
+  date_format: '2006年 1 月 2 日, Mon'
   time_format: '15:04'
   address_format: zh
 
