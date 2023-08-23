@@ -79,7 +79,7 @@ features:
   comment:
     provider: ''
     disqus:
-      shortname: ''
+      shortname: 'tangxg'
       show_count: true
     commento:
       url: ''
