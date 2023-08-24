@@ -11,7 +11,7 @@ date: 2023-08-23T07:15:03+08:00
 lastmod: 2023-08-23T07:15:03+08:00
 featured: true
 draft: false
-commentable: true
+# commentable: true
 url_pdf: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
