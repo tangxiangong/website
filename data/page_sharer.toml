@@ -39,7 +39,7 @@
   title = "WeChat"
   icon_pack = "fab"
   icon = "weixin"
-  enable = false
+  enable = true
 
 
 [[buttons]]
