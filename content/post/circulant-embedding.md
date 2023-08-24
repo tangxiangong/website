@@ -186,7 +186,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-S = (A+iB)D^2(A-iB) = (AD^2A +BD^2B) + i(BD^2A-AD^2B) = AD^2A + BD^2B, 
+S = (A+iB)D^2(A-iB) = AD^2A + BD^2B, 
 \end{aligned}
 $$
 $$
