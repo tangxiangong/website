@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/error-parabolic-minimal-regularity/index.md",
+                "file": "post/circulant-embedding.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/error-parabolic-minimal-regularity/index.md",
+                "file": "post/circulant-embedding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/error-parabolic-minimal-regularity/index.md",
+                "file": "post/circulant-embedding.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/error-parabolic-minimal-regularity/index.md"
+                "file": "post/circulant-embedding.md"
               }
             }
           }
@@ -150,8 +150,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a28c3b0e5f746f35",
+  "active": "4ed72d8c9f674224",
   "lastOpenFiles": [
+    "post/error-parabolic-minimal-regularity/index.md",
     "post/error-parabolic-minimal-regularity/error-parabolic-minimal-regularity.md",
     "publication/conference-paper/index.md",
     "publication/conference-paper/featured.jpg",
