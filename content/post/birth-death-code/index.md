@@ -1,6 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
-
+commentable: true
+share: true
 title: "Simulation of the Brownian yet non-Guassian polymers"
 subtitle: ""
 summary: "examples of Matlab simulation codes"

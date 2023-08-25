@@ -1,6 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
-
+commentable: true
+share: true
 title: "2nd semi-Lagrangian exponential time differencing method for convective Allen-Cahn equation"
 subtitle: ""
 summary: "Note on the article [Second-order semi-Lagrangian exponential time differencing method with enhanced error estimate for the convective Allen-Cahn equation, *J. Sci. Comput.* (2023)](https://doi.org/10.1007/s10915-023-02316-0), by Jingwei Li, Rihui Lan, Yongyong Cai, Lili Ju, and Xiaoqiang Wang."

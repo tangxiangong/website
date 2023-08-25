@@ -1,6 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
-
+commentable: true
+share: true
 title: "循环嵌入法和分数布朗运动模拟"
 subtitle: ""
 summary: "通过将 Toeplitz 型的协方差矩阵嵌入成循环矩阵, 利用快速 Fourier 变换得到分数布朗运动的模拟."
