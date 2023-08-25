@@ -6,7 +6,7 @@ subtitle: ""
 summary: "通过将 Toeplitz 型的协方差矩阵嵌入成循环矩阵, 利用快速 Fourier 变换得到分数布朗运动的模拟."
 authors: []
 tags: []
-categories: ['For X', '笔记']
+categories: ['XX']
 date: 2023-08-24T11:20:55+08:00
 lastmod: 2023-08-24T11:20:55+08:00
 featured: false
