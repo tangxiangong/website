@@ -6,7 +6,7 @@ subtitle: ""
 summary: "Note on the article [Second-order semi-Lagrangian exponential time differencing method with enhanced error estimate for the convective Allen-Cahn equation, *J. Sci. Comput.* (2023)](https://doi.org/10.1007/s10915-023-02316-0), by Jingwei Li, Rihui Lan, Yongyong Cai, Lili Ju, and Xiaoqiang Wang."
 authors: []
 tags: []
-categories: ['笔记', '计算方法']
+categories: ['NOTE', 'Numerical Analysis']
 date: 2023-08-25T11:17:14+08:00
 lastmod: 2023-08-25T11:17:14+08:00
 featured: true

@@ -15,7 +15,6 @@ superuser: true
 
 # Role/position/tagline
 role: Student in Computional Mathematics
-
 # Organizations/Affiliations to show in About widget
 #organizations:
  # - name: Lanzhou University
@@ -25,19 +24,20 @@ role: Student in Computional Mathematics
 bio: My research interests include the numerical analysis and scientific computing for the PDEs.
 
 # Interests to show in About widget
-# interests:
-#  - Numerical methods for the
-#   incompressible Navier-Stokes equations
-#   semilinear time-fractional PDEs
-#   phase field models
-#   semilinear parabolic equations
-# Maximal $L^p$-regularity of the time discretization schemes for parabolic equations
+interests:
+ - Numerical methods for the linear/semi-linear parabolic equations and incompressible Navier-Stokes equations
+ - Maximal $L^p$-regularity of the time discretization schemes for parabolic equations
 
 
 # Education to show in About widget
-# education: 
-#   - M.S., Computational Mathematics, Lanzhou University, 2020--2023. 
-#   - B.S., Mathematics, Lanzhou University, 2016--2020. 
+education:
+  courses:
+    - course: M.S. in Computational Mathematics
+      institution: Lanzhou University, advisor Prof. Weihua Deng
+      year: 2020-2023
+    - course: B.S. in Mathematics
+      institution: Lanzhou University
+      year: 2016-2020
 
 
 # Social/Academic Networking
@@ -72,17 +72,3 @@ highlight_name: true
 ---
 
 个人简介
-
-## Education
-
-- M.S., Computational Mathematics, Lanzhou University, 2020--2023.  
-- B.S., Mathematics, Lanzhou University, 2016--2020.  
-
-## Research interests
-
-- Numerical methods for the
-  - incompressible Navier-Stokes equations
-  - semilinear time-fractional PDEs
-  - phase field models
-  - semilinear parabolic equations
-- Maximal $L^p$-regularity of the time discretization schemes for parabolic equations
