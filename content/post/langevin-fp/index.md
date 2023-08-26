@@ -2,6 +2,7 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 commentable: true
 share: true
+reading_time: false
 title: "Langevin 方程与 Fokker-Planck 方程"
 subtitle: ""
 summary: "过阻尼 Langevin 方程所对应的 Fokker-Planck 方程"

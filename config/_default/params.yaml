@@ -62,6 +62,9 @@ locale:
 # Site features
 
 features:
+  reading_time: 
+    enable: false
+  related_content: true
   syntax_highlighter:
     theme_light: github-light
     theme_dark: dracula
