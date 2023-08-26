@@ -21,7 +21,7 @@ role: Student in Computional Mathematics
  #   url: 
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include the numerical analysis and scientific computing for the PDEs.
+# bio: 
 
 # Interests to show in About widget
 interests:
@@ -70,5 +70,3 @@ email: ''
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-
-个人简介
