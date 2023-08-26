@@ -21,7 +21,7 @@ marketing:
     description: "Xiangong Tang's personal website, powered by Wowchemy, a highly-customizable Hugo academic resume theme."
     twitter: 'wowchemy'
   analytics:
-    google_analytics: ''
+    google_analytics: 'G-DPVBFEWZZP'
     baidu_tongji: ''
     google_tag_manager: ''
     microsoft_clarity: ''  
