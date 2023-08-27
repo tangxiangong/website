@@ -28,10 +28,10 @@ sections:
     content:
       count: 2
       title: Recent Publications
-      text: |-
-        {{% callout note %}}
-        Quickly discover relevant content by [filtering publications](./publication/).
-        {{% /callout %}}
+      # text: |-
+      #   {{% callout note %}}
+      #   Quickly discover relevant content by [filtering publications](./publication/).
+      #   {{% /callout %}}
       filters:
         folders:
           - publication
@@ -52,7 +52,7 @@ sections:
         folders:
           - post
         # author: ""
-        # category: ""
+        category: "DONE"
         # tag: ""
         exclude_featured: false
         exclude_future: false

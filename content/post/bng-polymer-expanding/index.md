@@ -3,12 +3,12 @@
 commentable: true
 share: true
 reading_time: false
-title: "Simulation of the Brownian yet non-Guassian polymers"
+title: "扩张媒介下布朗非高斯聚合物质心运动的数值模拟演示"
 subtitle: ""
-summary: "examples of Matlab simulation codes"
+summary: "演示代码"
 authors: []
 tags: []
-categories: ['XX']
+categories: ['XX','DONE']
 date: 2023-08-25T19:18:50+08:00
 lastmod: 2023-08-25T19:18:50+08:00
 featured: false
@@ -29,6 +29,47 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+## 数学模型
+
+设 $y(t)$ 为物理坐标, $a(t)$ 为扩张因子, $x(t)$ 为共动坐标, 则
+{{< math >}}
+$$
+\begin{equation}
+y(t) = a(t)x(t).
+\end{equation}
+$$
+{{< /math >}}
+假设共动坐标 $x(t)$ 满足
+{{< math >}}
+$$
+\begin{equation}\label{eq:xLangevin}
+\mathrm{d}x(t) = \frac{\sqrt{2D(N(t))}}{a(t)}\mathrm{d}B(S_{\beta}(t)), \quad
+D(N(t)) = \frac{D_0}{(N(t)+n_{\min})^{\alpha}},
+\end{equation}
+$$
+{{< /math >}}
+其中
+{{< math >}}
+$$
+\begin{equation}\label{eq:St}
+S_{\beta}(t)=
+\begin{cases}
+t, & \beta=1, \\
+\text{$\beta$-稳定从属过程的逆过程}, & 0<\beta<1.
+\end{cases}
+\end{equation}
+$$
+{{< /math >}}
+扩张因子的具体形式
+{{< math >}}
+$$
+\begin{equation}\label{eq:at}
+a(t) = (1+t)^{\gamma},\; \text{(幂律型)}; \quad a(t)=\mathrm{e}^{Ht},\;\text{(指数型)}.
+\end{equation}
+$$
+{{< /math >}}
+
 ## 生灭过程相关函数
 
 - `[t, N] = birth_death_N(n_step, lambda, mu)`
@@ -61,7 +102,8 @@ projects: []
   ylabel('N')
   ```
   
-  ![simulation path of birth-death process](bd1.png "")
+  {{< figure src="https://forpicgo-1302963684.cos.ap-singapore.myqcloud.com/bd1-l.png" caption="" theme="light" >}}
+  <!-- ![simulation path of birth-death process](bd1.png "") -->
 
 - `[t, N] = birth_death_T(T, lambda, mu)`
 
@@ -92,8 +134,8 @@ projects: []
   xlabel('t')
   ylabel('N')
   ```
-  
-  ![simulation path of birth-death process](bd2.png "")
+  {{< figure src="https://forpicgo-1302963684.cos.ap-singapore.myqcloud.com/bd2-l.png" caption="" theme="light" >}}
+  <!-- ![simulation path of birth-death process](bd2.png "") -->
 
 - `[N, varargout] = birth_death_U(T, tau, lambda, mu)` 
 
@@ -135,8 +177,9 @@ projects: []
   %% 或者
   % N = birth_death_U(T, tau, lambda, mu);
   ```
-
-  ![simulation path of birth-death process](bd3.png "")
+  
+  {{< figure src="https://forpicgo-1302963684.cos.ap-singapore.myqcloud.com/bd3-l.png" caption="" theme="light" >}}
+  <!-- ![simulation path of birth-death process](bd3.png "") -->
 
 ## 扩张媒介下的布朗非高斯聚合物相关函数
 
@@ -261,13 +304,16 @@ projects: []
   title('复合逆从属过程, 幂律扩张, \gamma=0.5, \beta=0.7')
   legend('共动坐标 x(t)', '物理坐标 y(t)', Location='best')
   ```
+  
+  {{< figure src="https://forpicgo-1302963684.cos.ap-singapore.myqcloud.com/bng1-l.png" caption="" theme="light" >}}
+  <!-- {{< figure src="https://forpicgo-1302963684.cos.ap-singapore.myqcloud.com/bng1-d.png" caption="the simulation path" theme="dark" >}} -->
 
- ![simulation path of polymer](bng1.png "")
+ <!-- ![simulation path of polymer](bng1.png "")
  ![simulation path of polymer](bng2.png "")
  ![simulation path of polymer](bng3.png "")
  ![simulation path of polymer](bng4.png "")
  ![simulation path of polymer](bng5.png "")
- ![simulation path of polymer](bng6.png "")
+ ![simulation path of polymer](bng6.png "") -->
 
 - `m=EAMSD(M, T, a, tau, alpha, beta, n_min, D0, lambda, mu, arg)`
 
@@ -411,11 +457,11 @@ projects: []
       'Interpreter','latex', Location='best')
   title('幂律扩张, \beta=0.7')
   ```
-  
-  ![MSD](m1.png "")
+  {{< figure src="https://forpicgo-1302963684.cos.ap-singapore.myqcloud.com/m1-l.png" caption="" theme="light" >}}
+  <!-- ![MSD](m1.png "")
   ![MSD](m2.png "")
   ![MSD](m3.png "")
-  ![MSD](m4.png "")
+  ![MSD](m4.png "") -->
 
 - `m = EATAMSD(M, T, delta, a, alpha, beta, n_min, D0, lambda, mu, arg)`
 
