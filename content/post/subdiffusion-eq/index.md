@@ -539,7 +539,7 @@ u\tilde{P}(x,u)-\delta(x-x_0)=Du^{1-\alpha}\partial_x^2\tilde{P}(x,u),
 \begin{aligned}
 &\int_0^{\infty}\left(u\tilde{n}(s,u)+u^{1-\alpha}\partial_s\tilde{n}(s,u)\right)P_0(x,s)\mathrm{d}s\\
 =& \left(1-u^{1-\alpha}\tilde{n}(0,u)\right)\delta(x-x_0),
-\end{alignedw}
+\end{aligned}
 \end{equation}
 {{< /math >}}
 要想这个式子成立, 只能是两边都为零, 即
