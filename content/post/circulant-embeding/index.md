@@ -2,7 +2,6 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 commentable: true
 share: true
-reading_time: false
 title: "循环嵌入法和分数布朗运动模拟"
 subtitle: ""
 summary: "通过将 Toeplitz 型的协方差矩阵嵌入成循环矩阵, 利用快速 Fourier 变换得到分数布朗运动的模拟."
@@ -263,7 +262,7 @@ $$
 =& \sum_{i=1}^N\mathbb{E}[B(\mathbf{n}+\mathbf{k})B_{i+}(\mathbf{n})] \\
 =& \sum_{i=1}^N \mathbb{E}[B(\mathbf{n}+\mathbf{k})B(\mathbf{n}_{i+})] \\
 =& \frac{\sigma^2}{2}\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i+}||^{2H}-||\mathbf{n}+\mathbf{k} - \mathbf{n}_{i+}||^{2H}\right) \\
-=& \frac{\sigma^2}{2}\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i+}||^{2H}-||\mathbf{k}_{i-}||^{2H}\right) 
+=& \frac{\sigma^2}{2}\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i+}||^{2H}-||\mathbf{k}_{i-}||^{2H}\right),
 \end{aligned}
 $$
 $$
@@ -299,7 +298,7 @@ $$
 
 对于一维的带有周期边界条件的离散 Poisson 方程, 有
 $$
-{Y} = \Delta{B} = A{B}, \tag{*}
+{Y} = \Delta{B} = A{B}, \tag{*}\label{eq}
 $$
 其中 ${B}=(B_0, B_1, \cdots, B_{M-1})^T$, 边界 $B_0 = B_M$,
 {{< math >}}
@@ -315,10 +314,12 @@ A =
 $$
 {{< /math >}}
 是一个循环矩阵, 则
+{{< math >}}
 $$
 A = F^{-1} \Lambda F,
 $$
-其中 $F$ 是标准化的离散Fourier变换矩阵,  
+{{< /math >}}
+其中 $F$ 是标准化的离散 Fourier 变换矩阵,  
 {{< math >}}
 $$
 \Lambda = \mathrm{diag}\{g(\omega_0), \cdots, g(\omega_{M-1})\},
@@ -334,12 +335,12 @@ g(\omega_k) &= \omega_k^{M-1} + \omega_k - 2 \\
 &= e^{-i2\pi k/M} + e^{i2\pi k/M} -2 \\
 &= 2\cos{(2\pi k/M)} - 2\\
 &= -4 \sin^2{(2\pi k /(2M))}.
-	\end{aligned}
+\end{aligned}
 $$
 {{< /math >}}
-对方程 $\eqref{*}$ 进行离散 Fourier 变换, 得
+对方程 $\eqref{eq}$ 进行离散 Fourier 变换, 得
 $$
-	\hat{{Y}} = F{Y} = FA{B} = FF^{-1}\Lambda F{B} = \Lambda \hat{{B}},
+\hat{{Y}} = F{Y} = FA{B} = FF^{-1}\Lambda F{B} = \Lambda \hat{{B}},
 $$
 所以分量
 $$
@@ -350,4 +351,4 @@ $$
 
 Martin Dlask and  Jaromir Kukal, *Hurst exponent estimation of fractional surfaces for mammogram images analysis*, [Phys. A, **585** (2022) 126424](https://doi.org/10.1016/j.physa.2021.126424).
 
-C. R. Dietrich and G. N. Newsam, *Fast and exact simulation of stationary Gaussian processes through circulant embedding of the covariance matrix*, [SIAM J. Sci. Comput., **18** (1997) 1088-1107](https://doi.org/10.1137/S1064827592240555). 
+C. R. Dietrich and G. N. Newsam, *Fast and exact simulation of stationary Gaussian processes through circulant embedding of the covariance matrix*, [SIAM J. Sci. Comput., **18** (1997) 1088--1107](https://doi.org/10.1137/S1064827592240555). 

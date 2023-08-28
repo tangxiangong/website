@@ -1,16 +1,16 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
-commentable: true
-share: true
 reading_time: false
-title: "2nd semi-Lagrangian exponential time differencing method for convective Allen-Cahn equation"
+share: true
+commentable: true
+title: "Linear 2nd MBP-preserving BDF scheme for the Allen-Cahn equation with a general mobility"
 subtitle: ""
-summary: "Note on the article [Second-order semi-Lagrangian exponential time differencing method with enhanced error estimate for the convective Allen-Cahn equation, *J. Sci. Comput.* **97** (2023) 7](https://doi.org/10.1007/s10915-023-02316-0), by Jingwei Li, Rihui Lan, Yongyong Cai, Lili Ju, and Xiaoqiang Wang."
+summary: "Note on the artical [A linear second-order maxinum bound principle-preserving BDF scheme for the Allen-Cahn equation with a general mobility, *Math. Comp.* **92** (2023) 2515-2542](https://doi.org/10.1090/mcom/3843), by Dianming Hou, Lili Ju, and Zhonghua Qiao."
 authors: []
 tags: []
-categories: ['NOTE', 'Numerical Analysis']
-date: 2023-08-25T11:17:14+08:00
-lastmod: 2023-08-25T11:17:14+08:00
+categories: ['NOTE','Numerical Analysis']
+date: 2023-08-28T11:37:38+08:00
+lastmod: 2023-08-28T11:37:38+08:00
 featured: true
 draft: false
 

@@ -1,6 +1,5 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
-reading_time: false
 commentable: true
 share: true
 title: "欠(次)扩散方程, 积分变换与复合布朗运动"

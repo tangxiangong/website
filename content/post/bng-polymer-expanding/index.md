@@ -2,7 +2,6 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 commentable: true
 share: true
-reading_time: false
 title: "扩张媒介下布朗非高斯聚合物质心运动的数值模拟演示"
 subtitle: ""
 summary: "演示代码"

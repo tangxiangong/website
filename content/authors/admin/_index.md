@@ -25,8 +25,8 @@ role: Student in Computional Mathematics
 
 # Interests to show in About widget
 interests:
- - Numerical methods for the linear/semi-linear parabolic equations and incompressible Navier-Stokes equations
- - Maximal $L^p$-regularity of the time discretization schemes for parabolic equations
+ - Numerical methods for the linear/semi--linear parabolic equations and incompressible Navier-Stokes equations
+ - Maximal $L^p$--regularity of the time discretization schemes for parabolic equations
 
 
 # Education to show in About widget
