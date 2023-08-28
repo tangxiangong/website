@@ -113,7 +113,7 @@ $$
 注意到, $P = F^H$, $F$ 是离散 Fourier 变换矩阵, 并且
 {{< math >}}
 $$
-\alpha_k^H \alpha_j = \sum_{m=0}^{n-1}\bar{\omega}_k^{m} \omega_j^m = \sum_{m=0}^{n-1} e^{-i2\pi km/n}e^{i2\pi jm/n} = \sum_{m=0}^{n-1}e^{i2\pi (j-k)m/n}= n\delta_{jk},
+\alpha_k^H \alpha_j = \sum_{m=0}^{n-1} e^{-i2\pi km/n}e^{i2\pi jm/n} = \sum_{m=0}^{n-1}e^{i2\pi (j-k)m/n}= n\delta_{jk},
 $$
 $$
 \begin{aligned}
@@ -122,13 +122,6 @@ g(\omega_0) \\
 g(\omega_1) \\
 \vdots  \\
 g(\omega_{n-1})
-\end{bmatrix}
-= 
-\begin{bmatrix}
-a_0 + a_1 \omega_0 + \cdots + a_{n-1}\omega_0^{n-1} \\
-a_0 + a_1\omega_1 + \cdots + a_{n-1}\omega_1^{n-1} \\
-\vdots  \\
-a_0 + a_1\omega_{n-1} + \cdots + a_{n-1}\omega_{n-1}^{n-1}
 \end{bmatrix}
 = P^{T}
 \begin{bmatrix}
@@ -155,17 +148,17 @@ $$
 
 设 {{< math >}}$\Omega = \{x_0, \cdots, x_m\}${{< /math >}} 是均匀的节点,
 那么协方差矩阵 $R$ 是一个半正定的对称 Toeplitz 矩阵, 于是 $R$ 可由首行向量 $r=(r_0, r_1, \cdots, r_m)$ 唯一确定, 其中 $r_k = r(|x_0 - x_k|)$. 
-实际上, $R$ 显然是对称的. 另外由于 $\Omega$ 是均匀的, 所以 $R_{p+1, q+1}=r(|x_{p+1}-x_{q+1}|)=r(|x_p-x_q|)=R_{pq}$, 即 $R$ 是 Toeplitz 矩阵. 最后, 对于任意的 $u\in \mathbb{R}^{m+1}$, 
+实际上, $R$ 显然是对称的. 另外由于 $\Omega$ 是均匀的, 所以 $R_{p+1, q+1}=r(|x_{p+1}-x_{q+1}|)=r(|x_p-x_q|)=R_{pq}$, 即 $R$ 是 Toeplitz 矩阵. 最后, 对于任意的 $u\in \mathbb{R}^{m+1}$,
 $$
-u^T R u = u^T \mathbb{E}[yy^T] u =  \mathbb{E}[u^Tyy^Tu] = \mathbb{E}[(y^Tu)^T (y^Tu)] = Var(y^Tu) \geqslant 0,
+u^T R u = u^T \mathbb{E}[yy^T] u = \mathbb{E}[(y^Tu)^T (y^Tu)] = Var(y^Tu) \geqslant 0,
 $$
-这里用到了正态分布的线性性 $y^Tu \sim \mathcal{N}(0, Var(y^Tu))$, 所以 $R$ 是半正定的.
+这里用到了正态分布的线性性 $y^Tu \sim \mathcal{N}(0, \mathrm{Var}(y^Tu))$, 所以 $R$ 是半正定的.
 
 为了生成 $y$, 需要将协方差矩阵 $R$ 嵌入到一个对称Toeplitz矩阵中使其变成一个循环矩阵. 设 $S$ 是一个 $(2M)\times (2M)$ 的对称Toeplitz矩阵, 其首行向量 $s=(s_0, \cdots, s_{2M-1})$ 定义为
 $$ 
 s_k = r_k,\quad k=0,\cdots, m,
 \qquad
-	s_{2M-k}=r_k, \quad k=1,\cdots, m-1,
+s_{2M-k}=r_k, \quad k=1,\cdots, m-1,
 $$
 如果 $M>m$, $s_{m+1}, \cdots, s_{2M-m}$ 可取任意适合的值(下面要求 $S$ 半正定以满足 Gauss 过程的协方差矩阵的要求), 那么由上述方法 $R$ 嵌入得到的 $S$ 是一个循环矩阵, 并且沿主对角线的任意一个 $(m+1)\times (m+1)$ 块都等于 $R$. 由于 $S$ 是一个循环矩阵, 那么存在特征分解 $S=(1/(2M))F\Sigma F^{H}$, 其中 $F=(\exp(2\pi ipq/(2M)))_{0\leqslant p,q \leqslant 2M-1}$ 是离散 Fourier 变换矩阵, $\Sigma$ 是对角线向量为 $\tilde{s}=Fs$ 的对角矩阵,  由此可见, $S$ 半正定当且仅当 $\tilde{s}$ 中的元素非负.
 
@@ -192,7 +185,7 @@ S = (A+iB)D^2(A-iB) = AD^2A + BD^2B,
 \end{aligned}
 $$
 $$
-e = FD\varepsilon = (A+iB)D(\varepsilon_1 + i\varepsilon_2) = (AD\varepsilon_1-BD\varepsilon_2) +i(AD\varepsilon_2 + BD\varepsilon_1).
+e = FD\varepsilon = (AD\varepsilon_1-BD\varepsilon_2) +i(AD\varepsilon_2 + BD\varepsilon_1).
 $$
 {{< /math >}}
 即
@@ -213,7 +206,6 @@ $$
 \begin{aligned}
 \mathbb{E}[Re Re^T]
 &= \mathbb{E}[(AD\varepsilon_1 - BD\varepsilon_2)(\varepsilon_1^TDA-\varepsilon_2^TDB)] \\
-&= AD\mathbb{E}[\varepsilon_1\varepsilon_1^T]DA + BD\mathbb{E}[\varepsilon_2\varepsilon_2^T]DB-AD\mathbb{E}[\varepsilon_1\varepsilon_2^T]DB-BD\mathbb{E}[\varepsilon_2\varepsilon_1^T]DA \\
 &= AD^2A + BD^2B = S.
 \end{aligned}
 $$
@@ -227,13 +219,13 @@ $$
 \begin{aligned}
 \mathbb{E}[Re Im^T]
 &= \mathbb{E}[(AD\varepsilon_1 - BD\varepsilon_2)(\varepsilon_2^TDA+\varepsilon_1^TDB)] \\
-&= AD\mathbb{E}[\varepsilon_1\varepsilon_2^T]DA- BD\mathbb{E}[\varepsilon_2\varepsilon_1^T]DB+AD\mathbb{E}[\varepsilon_1\varepsilon_1^T]DB-BD\mathbb{E}[\varepsilon_2\varepsilon_2^T]DA \\
 &= AD^2B-BD^2A = O.
 \end{aligned}
 $$
 {{< /math >}}
 
 循环嵌入法生成$m+1$维随机向量 $y\sim \mathcal{N}(0, R)$的步骤如下:
+
 1. 将协方差矩阵 $R$ 嵌入到一个半正定的对称 Toeplitz 矩阵中得到一个 $(2M)\times (2M)$ 的循环矩阵 $S$, 使得 $s_k = r_k$, $k=0,\cdots, m$, $s_{2M-k}=r_k$, $k=1,\cdots, m-1$, 其中 $r$ 和 $s$ 分别为 $R$ 和 $S$ 的首行向量.
 2. 通过快速傅里叶变换计算 $\tilde{s} =Fs$, 组成向量 $(\tilde{s}/(2M))^{1/2}$.
 3. 生成 $2M$ 维向量 $\varepsilon = \varepsilon_1 + i\varepsilon_2$, 其中实随机向量 $\varepsilon_1$ 和 $\varepsilon_2$ 独立且都服从于 $\mathcal{N}(0, I_{2M})$.
@@ -250,45 +242,48 @@ $$
 {{< math >}}
 所以协方差
 $$
-	\begin{aligned}
-	\mathbf{C} &=	\mathbb{E}[\mathbf{Y}(\mathbf{n})({Y}(\mathbf{n}+\mathbf{k}))_{\mathbf{k}}] \\
-	&= \mathbb{E}[\mathbf{Y}(\mathbf{n})({B}(\mathbf{n}+\mathbf{k}))_{\mathbf{k}} \ast \Delta ] \\
-	&= \mathbb{E}[(\mathbf{Y}(\mathbf{n}){B}(\mathbf{n}+\mathbf{k}))_{\mathbf{k}}] \ast \Delta \\ 
-	&= \mathbb{E}[((\mathbf{B} \ast \Delta)(\mathbf{n}){B}(\mathbf{n}+\mathbf{k}))_{\mathbf{k}}] \ast \Delta \\ 
-	&=\left(\mathbb{E}[(\mathbf{B} \ast \Delta)(\mathbf{n}){B}(\mathbf{n}+\mathbf{k})]\right)_{\mathbf{k}} \ast \Delta \\ 	&=\left(\mathbb{E}\left[\left(\sum_{i=1}^{N}\left(B_{i+}(\mathbf{n})+B_{i-}(\mathbf{n})\right) - 2N B(\mathbf{n})\right){B}(\mathbf{n}+\mathbf{k})\right]\right)_{\mathbf{k}} \ast \Delta .
+\begin{aligned}
+&\mathbf{C}\\
+=& \mathbb{E}[\mathbf{Y}(\mathbf{n})({Y}(\mathbf{n}+\mathbf{k}))_{\mathbf{k}}] \\
+=& \mathbb{E}[\mathbf{Y}(\mathbf{n})({B}(\mathbf{n}+\mathbf{k}))_{\mathbf{k}} \ast \Delta ] \\
+=& \mathbb{E}[(\mathbf{Y}(\mathbf{n}){B}(\mathbf{n}+\mathbf{k}))_{\mathbf{k}}] \ast \Delta \\ 
+=& \mathbb{E}[((\mathbf{B} \ast \Delta)(\mathbf{n}){B}(\mathbf{n}+\mathbf{k}))_{\mathbf{k}}] \ast \Delta \\ 
+=&\left(\mathbb{E}[(\mathbf{B} \ast \Delta)(\mathbf{n}){B}(\mathbf{n}+\mathbf{k})]\right)_{\mathbf{k}} \ast \Delta \\
+=&\left(\mathbb{E}\left[\left(\sum_{i=1}^{N}\left(B_{i+}(\mathbf{n})+B_{i-}(\mathbf{n})\right) - 2N B(\mathbf{n})\right){B}(\mathbf{n}+\mathbf{k})\right]\right)_{\mathbf{k}} \ast \Delta .
 %	&= \left(\mathbb{E}\left[B(\mathbf{n}+\mathbf{k})\sum_{i=1}^NB_{i+}(\mathbf{k}) \right] - 2N \mathbb{E}\left[B(\mathbf{n}+\mathbf{k})B(\mathbf{k})\right]\right. \\
 %	&+ \left.\mathbb{E}\left[B(\mathbf{n}+\mathbf{k})\sum_{i=1}^NB_{i-}(\mathbf{k}) \right]\right)_{\mathbf{k}} \ast \Delta 
-	\end{aligned}\tag{1}
+\end{aligned}
 $$
 {{< /math >}}
 而
 {{< math >}}
 $$
-	\begin{aligned}
-		\mathbb{E}\left[B(\mathbf{n}+\mathbf{k})\sum_{i=1}^{N}B_{i+}(\mathbf{n})\right]&= 
-		\sum_{i=1}^N\mathbb{E}[B(\mathbf{n}+\mathbf{k})B_{i+}(\mathbf{n})] \\
-		&= \sum_{i=1}^N \mathbb{E}[B(\mathbf{n}+\mathbf{k})B(\mathbf{n}_{i+})] \\
-		&= \frac{\sigma^2}{2}\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i+}||^{2H}-||\mathbf{n}+\mathbf{k} - \mathbf{n}_{i+}||^{2H}\right) \\
-		&= \frac{\sigma^2}{2}\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i+}||^{2H}-||\mathbf{k}_{i-}||^{2H}\right) 
-	\end{aligned}\tag{2}
+\begin{aligned}
+&\mathbb{E}\left[B(\mathbf{n}+\mathbf{k})\sum_{i=1}^{N}B_{i+}(\mathbf{n})\right]\\
+=& \sum_{i=1}^N\mathbb{E}[B(\mathbf{n}+\mathbf{k})B_{i+}(\mathbf{n})] \\
+=& \sum_{i=1}^N \mathbb{E}[B(\mathbf{n}+\mathbf{k})B(\mathbf{n}_{i+})] \\
+=& \frac{\sigma^2}{2}\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i+}||^{2H}-||\mathbf{n}+\mathbf{k} - \mathbf{n}_{i+}||^{2H}\right) \\
+=& \frac{\sigma^2}{2}\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i+}||^{2H}-||\mathbf{k}_{i-}||^{2H}\right) 
+\end{aligned}
 $$
 $$
-	\begin{aligned}
-		\mathbb{E}\left[B(\mathbf{n}+\mathbf{k})\sum_{i=1}^{N}B_{i-}(\mathbf{n})\right]&= 
-		\sum_{i=1}^N\mathbb{E}[B(\mathbf{n}+\mathbf{k})B_{i-}(\mathbf{n})] \\
-		&= \sum_{i=1}^N \mathbb{E}[B(\mathbf{n}+\mathbf{k})B(\mathbf{n}_{i-})] \\
-		&= \frac{\sigma^2}{2}\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i-}||^{2H}-||\mathbf{n}+\mathbf{k} - \mathbf{n}_{i-}||^{2H}\right) \\
-		&= \frac{\sigma^2}{2}\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i-}||^{2H}-||\mathbf{k}_{i+}||^{2H}\right) 
-	\end{aligned}\tag{3}
+\begin{aligned}
+&\mathbb{E}\left[B(\mathbf{n}+\mathbf{k})\sum_{i=1}^{N}B_{i-}(\mathbf{n})\right]\\
+=& 
+\sum_{i=1}^N\mathbb{E}[B(\mathbf{n}+\mathbf{k})B_{i-}(\mathbf{n})] \\
+=& \sum_{i=1}^N \mathbb{E}[B(\mathbf{n}+\mathbf{k})B(\mathbf{n}_{i-})] \\
+=& \frac{\sigma^2}{2}\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i-}||^{2H}-||\mathbf{n}+\mathbf{k} - \mathbf{n}_{i-}||^{2H}\right) \\
+=& \frac{\sigma^2}{2}\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i-}||^{2H}-||\mathbf{k}_{i+}||^{2H}\right) 
+\end{aligned}
 $$
 $$\mathbb{E}\left[B(\mathbf{n}+\mathbf{k})B(\mathbf{n})\right]=\frac{\sigma^2}{2} 
-  \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}||^{2H}-||\mathbf{k}||^{2H}\right) \tag{4}
+  \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}||^{2H}-||\mathbf{k}||^{2H}\right).
 $$
 {{< /math >}}
-将 (2), (3), (4) 代入 (1), 得
+综上所述, 有
 {{< math >}}
 $$
- \begin{aligned}
+\begin{aligned}
 \mathbf{C} &= \frac{\sigma^2}{2}\left( \sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i+}||^{2H}-||\mathbf{k}_{i-}||^{2H}\right) \right. \\
 &-2N\left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}||^{2H}-||\mathbf{k}||^{2H}\right) \\
 & +\left.\sum_{i=1}^N \left(||\mathbf{n}+\mathbf{k}||^{2H}+||\mathbf{n}_{i-}||^{2H}-||\mathbf{k}_{i+}||^{2H}\right)\right)_{\mathbf{k}}\ast \Delta \\
@@ -304,9 +299,9 @@ $$
 
 对于一维的带有周期边界条件的离散 Poisson 方程, 有
 $$
-{Y} = \Delta{B} = A{B}, \tag{5}
+{Y} = \Delta{B} = A{B}, \tag{*}
 $$
-其中 ${B}=(B_0, B_1, \cdots, B_{M-1})^T$, 边界 $B_0 = B_M$, 
+其中 ${B}=(B_0, B_1, \cdots, B_{M-1})^T$, 边界 $B_0 = B_M$,
 {{< math >}}
 $$
 A =
@@ -332,17 +327,17 @@ $$
 $g(x)=x^{M-1}+x-2$, $\omega_k = e^{i2\pi k/M}$, $k=0,1, \cdots, M-1$ 为 $M$ 次单位根.
 {{< math >}}
 $$
-	\begin{aligned}
-		g(\omega_k) &= \omega_k^{M-1} + \omega_k - 2 \\
-		&= e^{i2\pi k(M-1)/M} + e^{i2\pi k/M} - 2 \\
-		&= e^{i2\pi k}e^{-i2\pi k/M} + e^{i2\pi k/M} -2 \\
-		&= e^{-i2\pi k/M} + e^{i2\pi k/M} -2 \\
-		&= 2\cos{(2\pi k/M)} - 2\\
-		&= -4 \sin^2{(2\pi k /(2M))}.
+\begin{aligned}
+g(\omega_k) &= \omega_k^{M-1} + \omega_k - 2 \\
+&= e^{i2\pi k(M-1)/M} + e^{i2\pi k/M} - 2 \\
+&= e^{i2\pi k}e^{-i2\pi k/M} + e^{i2\pi k/M} -2 \\
+&= e^{-i2\pi k/M} + e^{i2\pi k/M} -2 \\
+&= 2\cos{(2\pi k/M)} - 2\\
+&= -4 \sin^2{(2\pi k /(2M))}.
 	\end{aligned}
 $$
 {{< /math >}}
-对方程 (5) 进行离散 Fourier 变换, 得
+对方程 $\eqref{*}$ 进行离散 Fourier 变换, 得
 $$
 	\hat{{Y}} = F{Y} = FA{B} = FF^{-1}\Lambda F{B} = \Lambda \hat{{B}},
 $$

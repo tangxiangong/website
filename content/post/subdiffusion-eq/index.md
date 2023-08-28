@@ -33,16 +33,16 @@ projects: []
 ## 积分变换
 
 > **定义** (拉普拉斯变换)
->设函数 $f(t)\in L^1([0,\infty); \mathbb{R})$, 并且存在常数 $C>0$ 以及 $\sigma\in \mathbb{R}$ 使得 $\vert f(t)\vert \sim Ce^{\sigma t}$, 则 $f(t)$ 的拉普拉斯变换 {{< math >}}$\widetilde{f}(s)=\mathscr{L}[f(t)](s)${{< /math >}} 定义为
+>设函数 $f(t)\in L^1([0,\infty); \mathbb{R})$, 并且存在常数 $C>0$ 以及 $\sigma\in \mathbb{R}$ 使得 $\vert f(t)\vert \sim C\mathrm{e}^{\sigma t}$, 则 $f(t)$ 的拉普拉斯变换 {{< math >}}$\widetilde{f}(s)=\mathscr{L}[f(t)](s)${{< /math >}} 定义为
 {{< math >}}
-$$\tilde{f}(s) = \int_0^{\infty}e^{-st}f(t)\mathrm{d}s, \qquad \forall s\in \{z\in \mathbb{C}:\Re(z)>\sigma\}.$$
+$$\tilde{f}(s) = \int_0^{\infty}\mathrm{e}^{-st}f(t)\mathrm{d}s, \qquad \forall s\in \{z\in \mathbb{C}:\Re(z)>\sigma\}.$$
 {{< /math >}}
 称 {{< math >}}$\{z\in \mathbb{C}:\Re(z)>\sigma\}${{< /math >}} 为 $\tilde{f}(s)$ 的收敛域.
  
 >**定义** (拉普拉斯逆变换) 函数 $\tilde{f}(s)$ 的拉普拉斯逆变换 {{< math >}}$f(t)=\mathscr{L}^{-1}[\tilde{f}(s)](t)${{< /math>}} 由如下复积分给出, 
 {{< math >}}
 $$
-f(t) = \frac{1}{2\pi i}\int_{\gamma-i\infty}^{\gamma+i\infty}e^{st}\tilde{f}(s)\mathrm{d}s,
+f(t) = \frac{1}{2\pi i}\int_{\gamma-i\infty}^{\gamma+i\infty}\mathrm{e}^{st}\tilde{f}(s)\mathrm{d}s,
 $$
 {{< /math >}}
 其中 $\gamma\in\mathbb{R}$ 满足 {{< math >}}$\{z\in\mathbb{C}:\Re(z)=\gamma\}${{< /math >}} 包含在 $\tilde{f}$ 的收敛域内.
@@ -51,14 +51,14 @@ $$
 设函数 $f(x)\in L^1(\mathbb{R}; \mathbb{R})$, 则 $f(x)$ 的傅里叶变换 {{< math >}}$\hat{f}(k)=\mathscr{F}[f(x)](k)${{< /math >}} 定义为
 {{< math >}}
 $$
-\hat{f}(k) = \int_{\mathbb{R}}e^{ikx}f(x)\mathrm{d}x.
+\hat{f}(k) = \int_{\mathbb{R}}\mathrm{e}^{\mathrm{i}kx}f(x)\mathrm{d}x.
 $$
 {{< /math >}}
 
 >**定义**(傅里叶逆变换) 函数 $\hat{f}(k)$ 的傅里叶逆变换 {{< math >}}$f(x)=\mathscr{F}^{-1}[\hat{f}(k)](x)${{< /math >}} 为
 {{< math >}}
 $$
-f(x) = \frac{1}{2\pi}\int_{\mathbb{R}}e^{-ikx}\hat{f}(k)\mathrm{d}k.
+f(x) = \frac{1}{2\pi}\int_{\mathbb{R}}\mathrm{e}^{-\mathrm{i}kx}\hat{f}(k)\mathrm{d}k.
 $$
 {{< /math >}}
 
@@ -90,7 +90,7 @@ $$
 \mathcal{M}[\mathscr{L}[f(t)](s)](1-p) 
 =&\int_{0}^{\infty}s^{-p}\int_0^{\infty}\mathrm{e}^{-st}f(t)\mathrm{d}t\mathrm{d}s \\
 =&\int_0^{\infty}f(t)\int_0^{\infty}s^{-p}\mathrm{e}^{-st}\mathrm{d}s\mathrm{d}t \\
-=&\int_{0}^{\infty}f(t)\int_{0}^{\infty}\left(\frac{z}{t}\right)^{-p}\mathrm{e}^{-z}\frac{\mathrm{d}z}{t}\mathrm{d}t  \qquad z=st, \; \mathrm{d}s = \frac{\mathrm{d}z}{t} \\
+=&\int_{0}^{\infty}f(t)\int_{0}^{\infty}\left(\frac{z}{t}\right)^{-p}\mathrm{e}^{-z}\frac{\mathrm{d}z}{t}\mathrm{d}t  \qquad z=st \\
 =&\Gamma(1-p)\int_0^{\infty}t^{p-1}f(t)\mathrm{d}t \\
 =&\Gamma(1-p)\mathcal{M}[f(t)](p).
 \end{aligned}
@@ -108,10 +108,10 @@ $$
 $$
 \begin{aligned}
 \mathscr{L}[f\ast g](s)
-=&\int_{0}^{\infty}e^{-st}\int_0^tf(t-\tau)g(\tau)\mathrm{d}\tau\mathrm{d}t \\
-=&\int_0^{\infty}g(\tau)\int_{\tau}^{\infty}e^{-st}f(t-\tau)\mathrm{d}t\mathrm{d}\tau \\
-=&\int_0^{\infty}g(\tau)\int_0^{\infty}e^{-s(u+\tau)}f(u)\mathrm{d}u\mathrm{d}\tau \qquad u=t-\tau \\
-=&\left(\int_0^{\infty}e^{-s\tau}g(\tau)\mathrm{d}\tau\right)\left(\int_0^{\infty}e^{-su}f(u)\mathrm{d}u\right) \\
+=&\int_{0}^{\infty}\mathrm{e}^{-st}\int_0^tf(t-\tau)g(\tau)\mathrm{d}\tau\mathrm{d}t \\
+=&\int_0^{\infty}g(\tau)\int_{\tau}^{\infty}\mathrm{e}^{-st}f(t-\tau)\mathrm{d}t\mathrm{d}\tau \\
+=&\int_0^{\infty}g(\tau)\int_0^{\infty}\mathrm{e}^{-s(u+\tau)}f(u)\mathrm{d}u\mathrm{d}\tau \qquad u=t-\tau \\
+=&\left(\int_0^{\infty}\mathrm{e}^{-s\tau}g(\tau)\mathrm{d}\tau\right)\left(\int_0^{\infty}\mathrm{e}^{-su}f(u)\mathrm{d}u\right) \\
 =&\mathscr{L}[f](s)\mathscr{L}[g](s).
 \end{aligned}
 $$
@@ -129,9 +129,9 @@ $$
 \begin{equation*}
 \begin{aligned}
 \mathscr{L}[f^{(n)}](s)
-=&\int_0^{\infty}e^{-st}f^{(n)}(t)dt \\
-=&s\int_0^{\infty}e^{-st}f^{(n-1)}(t)dt - f^{(n-1)}(0) \\
-=&s^n\int_0^{\infty}e^{-st}f(t)dt-\sum_{k=0}^{n-1}s^{n-1-k}f^{(k)}(0) \\
+=&\int_0^{\infty}\mathrm{e}^{-st}f^{(n)}(t)\mathrm{d}t \\
+=&s\int_0^{\infty}\mathrm{e}^{-st}f^{(n-1)}(t)\mathrm{d}t - f^{(n-1)}(0) \\
+=&s^n\int_0^{\infty}\mathrm{e}^{-st}f(t)\mathrm{d}t-\sum_{k=0}^{n-1}s^{n-1-k}f^{(k)}(0) \\
 =&s^n\mathscr{L}[f](s) - \sum_{k=0}^{n-1}s^{n-1-k}f^{(k)}(0).
 \end{aligned}
 \end{equation*}
@@ -140,7 +140,7 @@ $$
 **性质4**	(导函数的傅里叶变换) 速降函数 $f(x)$ 的 $n$ 阶导函数 $f^{(n)}(x)$ 的傅里叶变换为
 {{< math >}}
 \begin{equation}
-\mathscr{F}[f^{(n)}](k) = (-ik)^n\mathscr{F}[f](k).
+\mathscr{F}[f^{(n)}](k) = (-\mathrm{i}k)^n\mathscr{F}[f](k).
 \end{equation}
 {{< /math >}}
 *Proof.*
@@ -148,10 +148,10 @@ $$
 \begin{equation*}
 \begin{aligned}
 \mathscr{F}[f^{(n)}](k) 
-=&\int_{\mathbb{R}}e^{ikx}f^{(n)}(x)\mathrm{d}x\\
-=&-ik\int_{\mathbb{R}}e^{ikx}f^{(n-1)}(x)\mathrm{d}x \\
-=&(-ik)^n\int_{\mathbb{R}}e^{ikx}f(x)\mathrm{d}x \\
-=&(-ik)^n\mathscr{F}[f](k).
+=&\int_{\mathbb{R}}\mathrm{e}^{\mathrm{i}kx}f^{(n)}(x)\mathrm{d}x\\
+=&-\mathrm{i}k\int_{\mathbb{R}}\mathrm{e}^{\mathrm{i}kx}f^{(n-1)}(x)\mathrm{d}x \\
+=&(-\mathrm{i}k)^n\int_{\mathbb{R}}\mathrm{e}^{\mathrm{i}kx}f(x)\mathrm{d}x \\
+=&(-\mathrm{i}k)^n\mathscr{F}[f](k).
 \end{aligned}
 \end{equation*}
 {{< /math >}}
@@ -159,10 +159,10 @@ $$
 **性质5** (傅里叶变换及其逆变换的平移性质)
 {{< math >}}
 \begin{equation}
-\mathscr{F}[f(x-x_0)](k) = e^{ikx_0}\mathscr{F}[f](k),
+\mathscr{F}[f(x-x_0)](k) = \mathrm{e}^{\mathrm{i}kx_0}\mathscr{F}[f](k),
 \end{equation}
 \begin{equation}
-\mathscr{F}^{-1}[e^{ikx_0}\mathscr{F}[f](k)](x) = f(x-x_0).
+\mathscr{F}^{-1}[\mathrm{e}^{\mathrm{i}kx_0}\mathscr{F}[f](k)](x) = f(x-x_0).
 \end{equation}
 {{< /math >}}
 *Proof.*
@@ -170,9 +170,9 @@ $$
 \begin{equation*}
 \begin{aligned}
 \mathscr{F}[f(x-x_0)](k)
-=&\int_{\mathbb{R}}e^{ikx}f(x-x_0)\mathrm{d}x \\
-=&\int_{\mathbb{R}}e^{ik(x'+x_0)}f(x')\mathrm{d}x' \\
-=&e^{ikx_0}\mathscr{F}[f](k).
+=&\int_{\mathbb{R}}\mathrm{e}^{\mathrm{i}kx}f(x-x_0)\mathrm{d}x \\
+=&\int_{\mathbb{R}}\mathrm{e}^{\mathrm{i}k(x'+x_0)}f(x')\mathrm{d}x' \\
+=&\mathrm{e}^{\mathrm{i}kx_0}\mathscr{F}[f](k).
 \end{aligned}
 \end{equation*}
 {{< /math >}}
@@ -180,7 +180,7 @@ $$
 **例子** (幂函数的拉普拉斯变换) 设幂函数 $f(t)=t^{\alpha}$, 其中 $\alpha>-1$, 则
 {{< math >}}
 \begin{equation*}
-\tilde{f}(s)= \int_0^{\infty}e^{-st}t^{\alpha}\mathrm{d}t=\int_0^{\infty}e^{-z}\left(\frac{z}{s}\right)^{\alpha}\frac{\mathrm{d}z}{s} = \frac{\Gamma(1+\alpha)}{s^{1+\alpha}}.
+\tilde{f}(s)= \int_0^{\infty}\mathrm{e}^{-st}t^{\alpha}\mathrm{d}t=\int_0^{\infty}\mathrm{e}^{-z}\left(\frac{z}{s}\right)^{\alpha}\frac{\mathrm{d}z}{s} = \frac{\Gamma(1+\alpha)}{s^{1+\alpha}}.
 \end{equation*}
 {{< /math >}}
 **例子** ($\mathrm{e}^{-a\vert x\vert}$ 的傅里叶变换) 设 $f(x)=\mathrm{e}^{-a\vert x\vert}$, 其中 $a>0$, 则
@@ -197,7 +197,7 @@ $$
 {{< math >}}
 \begin{equation}
 \begin{aligned}
-\int_0^{\infty}\cos{(kx)}\mathrm{e}^{-ax}\mathrm{d}x 
+&\int_0^{\infty}\cos{(kx)}\mathrm{e}^{-ax}\mathrm{d}x \\
 =& \frac{1}{k}\int_0^{\infty}\mathrm{e}^{-ax}\mathrm{d}\sin{(kx)} \\
 =&\frac{1}{k}\left[\mathrm{e}^{-ax}\sin{(kx)}\left.\right\vert_{x=0}^{x=\infty}+a\int_0^{\infty}\mathrm{e}^{-ax}\sin{(kx)}\mathrm{d}x\right] \\
 =&\frac{a}{k}\int_0^{\infty}\mathrm{e}^{-ax}\sin{(kx)}\mathrm{d}x	\\
@@ -263,8 +263,8 @@ f(t) &= \frac{1}{\nu a^{\frac{\mu+1}{\nu}}}\frac{1}{2\pi \mathrm{i}}\int_{c-\mat
 {{< math >}}
 \begin{equation}	
 \begin{aligned}
-\textnormal{Res}(s_n) &= \lim_{s\to s_n}(s-s_n)\frac{\Gamma(\frac{\mu+1+s}{\nu})}{\Gamma(1+s)}\left(\frac{a^{\frac{1}{\nu}}}{t}\right)^{-s} \\
-&= \frac{1}{\Gamma(-\mu-\nu n)}\left(\frac{a^{\frac{1}{\nu}}}{t}\right)^{1+\mu+\nu n} \lim_{s\to s_n}(s-s_n)\Gamma(\frac{\mu+1+s}{\nu}) \\
+\textnormal{Res}(s_n) &= \lim_{s\to s_n}(s-s_n)\frac{\Gamma\left(\frac{\mu+1+s}{\nu}\right)}{\Gamma(1+s)}\left(\frac{a^{\frac{1}{\nu}}}{t}\right)^{-s} \\
+&= \frac{1}{\Gamma(-\mu-\nu n)}\left(\frac{a^{\frac{1}{\nu}}}{t}\right)^{1+\mu+\nu n} \lim_{s\to s_n}(s-s_n)\Gamma\left(\frac{\mu+1+s}{\nu}\right) \\
 &= \frac{\nu}{n!\Gamma(-\mu-\nu n)}\left(\frac{a^{\frac{1}{\nu}}}{t}\right)^{1+\mu}\left(-\frac{a}{t^{\nu}}\right)^{n},
 \end{aligned}
 \end{equation}
@@ -273,11 +273,11 @@ f(t) &= \frac{1}{\nu a^{\frac{\mu+1}{\nu}}}\frac{1}{2\pi \mathrm{i}}\int_{c-\mat
 {{< math >}}
 $$
 \begin{aligned}
-&\lim_{s\to s_n}(s-s_n)\Gamma(\frac{\mu+1+s}{\nu})\\
-=&\lim_{s\to -1-\mu - \nu n}(s+1+\mu+\nu n)\Gamma(\frac{\mu+1+s}{\nu}) \\
-=& \lim_{s\to -1-\mu-\nu n}\frac{(s+1+\mu+\nu n)\Gamma(\frac{\mu+1+s}{\nu}+1)}{\frac{\mu+1+s}{\nu}}\\
-=& \lim_{s\to -1-\mu-\nu n}\frac{(s+1+\mu+\nu n)\Gamma(\frac{\mu+1+s}{\nu}+n+1)}{\frac{\mu+1+s}{\nu}\cdots(\frac{\mu+1+s}{\nu}+n)} \\
-=& \lim_{s\to -1-\mu-\nu n}\frac{\Gamma(\frac{\mu+1+s}{\nu}+n+1)}{\frac{\mu+1+s}{\nu}\cdots(\frac{\mu+1+s}{\nu}+n-1)}\nu \\
+&\lim_{s\to s_n}(s-s_n)\Gamma\left(\frac{\mu+1+s}{\nu}\right)\\
+=&\lim_{s\to -1-\mu - \nu n}(s+1+\mu+\nu n)\Gamma\left(\frac{\mu+1+s}{\nu}\right) \\
+=& \lim_{s\to -1-\mu-\nu n}\frac{(s+1+\mu+\nu n)\Gamma\left(\frac{\mu+1+s}{\nu}+1\right)}{\frac{\mu+1+s}{\nu}}\\
+=& \lim_{s\to -1-\mu-\nu n}\frac{(s+1+\mu+\nu n)\Gamma\left(\frac{\mu+1+s}{\nu}+n+1\right)}{\frac{\mu+1+s}{\nu}\cdots\left(\frac{\mu+1+s}{\nu}+n\right)} \\
+=& \lim_{s\to -1-\mu-\nu n}\frac{\Gamma\left(\frac{\mu+1+s}{\nu}+n+1\right)}{\frac{\mu+1+s}{\nu}\cdots\left(\frac{\mu+1+s}{\nu}+n-1\right)}\nu \\
 =&\frac{\nu}{(-n)\cdots (-1)} \\
 =&\frac{(-1)^n\nu}{n!}.
 \end{aligned}
@@ -314,7 +314,10 @@ f_{\mu,\nu}(t;a)=\frac{1}{t^{1+\mu}}\sum_{n=0}^{\infty}\frac{1}{n!\Gamma(-\mu-\n
 >**定义** ($\alpha$ 阶 Caputo 导数) 设 $\alpha>0$, $n=[\alpha]+1$, 函数 $f(t)\in C^n(a,b)$, 则 $f(t)$ 的 $\alpha$ 阶 Caputo 导数$({}_a^CD_t^{\alpha}f)(t)$ 定义为
 {{< math >}}
 \begin{equation}
-({}_a^CD_t^{\alpha}f)(t) = \left({}_aI_t^{n-\alpha}\frac{d^n}{dt^n}\right)f(t) = \frac{1}{\Gamma(n-\alpha)}\int_a^t(t-s)^{n-\alpha-1}f^{(n)}(s)\mathrm{d}s.
+\begin{aligned}
+({}_a^CD_t^{\alpha}f)(t) &= \left({}_aI_t^{n-\alpha}\frac{d^n}{dt^n}\right)f(t)\\
+& = \frac{1}{\Gamma(n-\alpha)}\int_a^t(t-s)^{n-\alpha-1}f^{(n)}(s)\mathrm{d}s.
+\end{aligned}
 \end{equation}
 {{< /math >}}
 
@@ -333,7 +336,7 @@ f_{\mu,\nu}(t;a)=\frac{1}{t^{1+\mu}}\sum_{n=0}^{\infty}\frac{1}{n!\Gamma(-\mu-\n
 **性质7** (拉普拉斯指数) 设 $T(t)$ 是一个$ \alpha$-稳定的从属过程, 则其拉普拉斯指数为 $-s^{\alpha}$, 即
 {{< math >}}
 \begin{equation}
-\tilde{g}(s,t) = \mathbb{E}\mathrm{e}^{-sT(t)}=\int_0^{\infty}\mathrm{e}^{-sT}g(x,t)dT = \mathrm{e}^{-ts^{\alpha}},
+\tilde{g}(s,t) = \mathbb{E}\mathrm{e}^{-sT(t)}=\int_0^{\infty}\mathrm{e}^{-sT}g(x,t)\mathrm{d}T = \mathrm{e}^{-ts^{\alpha}},
 \end{equation}
 {{< /math >}}
 其中 $g(x,t)$ 是 $T(t)$ 的概率密度函数.
@@ -386,9 +389,9 @@ E(t) = \inf\{u>0:T(u)>t\}.
 h(u,t) &=\partial_u \mathbb{P}(E(t)\leqslant u) \\
 &=\partial_u \mathbb{P}(T(u)\geqslant t) \\
 <!-- &=\partial_u(1-\mathbb{P}(T(u)<t))\\ -->
-&=-\partial_u \int_0^t g(x,u)dx \\
-&=-\partial_u \int_0^t u^{-1/\alpha}g_{\alpha}(u^{-1/\alpha}x)dx \\
-&=-\partial_u\int_0^{u^{-1/\alpha}t}g_{\alpha}(y)dy \qquad y=u^{-1/\alpha}x \\
+&=-\partial_u \int_0^t g(x,u)\mathrm{d}x \\
+&=-\partial_u \int_0^t u^{-1/\alpha}g_{\alpha}(u^{-1/\alpha}x)\mathrm{d}x \\
+&=-\partial_u\int_0^{u^{-1/\alpha}t}g_{\alpha}(y)\mathrm{d}y \qquad y=u^{-1/\alpha}x \\
 &= \frac{t}{\alpha}u^{-1-1/\alpha}g_{\alpha}(u^{-1/\alpha}t) \\
 &=\frac{t}{\alpha^2}u^{-1-1/\alpha}H\left[\frac{u^{1/\alpha}}{t}\left.\right\vert_{(\frac{1}{\alpha}, \frac{1}{\alpha})}^{(1,1)} \right],
 \end{aligned}
@@ -467,7 +470,7 @@ P(x,t)&=\frac{1}{\sqrt{4Dt}}\sum_{n=0}^{\infty}
 所以
 {{< math >}}
 \begin{align}
-&\frac{1}{(2n)!\Gamma{(1-n/2)}}\\ 
+\frac{1}{(2n)!\Gamma{(1-n/2)}}
 =&\frac{(2n-1)!!}{\sqrt{\pi}(2n)!(-2)^n}\\
 =&\frac{1}{\sqrt{\pi}(2n)!!(-2)^n}\\
 =&\frac{1}{\sqrt{\pi}(n!2^n)(-2)^n}\\
@@ -506,13 +509,13 @@ P_0(x,0)=\delta(x-x_0),
 首先对 ($\ref{c}$) 式两边对 $x$ 积分, 然后进行拉普拉斯变换 $t\to u$, 得
 {{< math >}}
 \begin{equation}
-\int_{\mathbb{R}}P(x,t)dx = \int_{\mathbb{R}}\int_{0}^{\infty}n(s,t)P_0(x,s)dsdx = \int_0^{\infty}n(s,t)\int_{\mathbb{R}}P_0(x,s)dxds,
+\int_{\mathbb{R}}P(x,t)\mathrm{d}x  = \int_0^{\infty}n(s,t)\int_{\mathbb{R}}P_0(x,s)\mathrm{d}x\mathrm{d}s,
 \end{equation}
 \begin{equation}
-1 = \int_0^{\infty}n(s,t)ds,
+1 = \int_0^{\infty}n(s,t)\mathrm{d}s,
 \end{equation}
 \begin{equation}
-\frac{1}{u} = \int_0^{\infty}\tilde{n}(s,u)ds.
+\frac{1}{u} = \int_0^{\infty}\tilde{n}(s,u)\mathrm{d}s.
 \end{equation}
 {{< /math >}}
 对方程 ($\ref{eq}$) 进行拉普拉斯变换, 得
@@ -522,10 +525,10 @@ u\tilde{P}(x,u)-\delta(x-x_0)=Du^{1-\alpha}\partial_x^2\tilde{P}(x,u),
 \end{equation}
 \begin{equation}
 \begin{aligned}
-&u\int_{0}^{\infty}\tilde{n}(s,u)P_0(x,s)ds - \delta(x-x_0)\\
-=&Du^{1-\alpha}\int_0^{\infty}\tilde{n}(s,u)\partial_x^2P_0(x,s)ds\\
-=&u^{1-\alpha}\int_0^{\infty}\tilde{n}(s,u)\partial_s P_0(x,s)ds \\
-=&u^{1-\alpha}\left(\tilde{n}(\infty, u)P_0(x,\infty)-\tilde{n}(0,u)P_0(x,0)-\int_{0}^{\infty}\partial_s\tilde{n}(s,u)P_0(x,s)ds\right),
+&u\int_{0}^{\infty}\tilde{n}(s,u)P_0(x,s)\mathrm{d}s - \delta(x-x_0)\\
+=&Du^{1-\alpha}\int_0^{\infty}\tilde{n}(s,u)\partial_x^2P_0(x,s)\mathrm{d}s\\
+=&u^{1-\alpha}\int_0^{\infty}\tilde{n}(s,u)\partial_s P_0(x,s)\mathrm{d}s \\
+=&u^{1-\alpha}\left(\tilde{n}(s, u)P_0(x,s)|_{s=0}^{s=\infty}-\int_{0}^{\infty}\partial_s\tilde{n}(s,u)P_0(x,s)\mathrm{d}s\right),
 \end{aligned}
 \end{equation}
 {{< /math >}}
@@ -533,7 +536,10 @@ u\tilde{P}(x,u)-\delta(x-x_0)=Du^{1-\alpha}\partial_x^2\tilde{P}(x,u),
 所以上式就可以写作
 {{< math >}}
 \begin{equation}
-\int_0^{\infty}\left(u\tilde{n}(s,u)+u^{1-\alpha}\partial_s\tilde{n}(s,u)\right)P_0(x,s)ds = \left(1-u^{1-\alpha}\tilde{n}(0,u)\right)\delta(x-x_0),
+\begin{aligned}
+&\int_0^{\infty}\left(u\tilde{n}(s,u)+u^{1-\alpha}\partial_s\tilde{n}(s,u)\right)P_0(x,s)\mathrm{d}s\\
+=& \left(1-u^{1-\alpha}\tilde{n}(0,u)\right)\delta(x-x_0),
+\end{alignedw}
 \end{equation}
 {{< /math >}}
 要想这个式子成立, 只能是两边都为零, 即
@@ -548,7 +554,7 @@ u\tilde{P}(x,u)-\delta(x-x_0)=Du^{1-\alpha}\partial_x^2\tilde{P}(x,u),
 解之得
 {{< math >}}
 \begin{equation}
-\tilde{n}(s,u) = u^{\alpha-1}e^{-u^{\alpha}s}.
+\tilde{n}(s,u) = u^{\alpha-1}\mathrm{e}^{-u^{\alpha}s}.
 \end{equation}
 {{< /math >}}
 这个和 $\tilde{h}$ 是一样的, 所以说 $n$ 是逆从属过程的概率密度, 即欠扩散方程 ($\ref{eq}$) 是复合布朗运动 $B(E(t))$ 所对应的扩散方程.

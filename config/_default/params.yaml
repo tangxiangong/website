@@ -8,8 +8,8 @@
 appearance:
   theme_day: minimal
   theme_night: minimal
-  font: my-font
-  font_size: M
+  font: native
+  font_size: L
 
 # SEO
 
