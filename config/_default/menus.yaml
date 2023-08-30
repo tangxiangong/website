@@ -16,6 +16,17 @@ main:
   - name: Blogs
     url: '/post'
     weight: 40
+  # - name: RSS Feed
+  #   identifier: rss
+  #   weight: 50
+  # - name: MCOM
+  #   parent: 'rss'
+  #   url: 'https://widget-cf99eb54524a46c1973072c41afc537a.elfsig.ht'
+  #   weight: 1
+  # - name: math.NA
+  #   parent: 'rss'
+  #   url: 'https//rss.bloople.net/?url=http%3A%2F%2Farxiv.org%2Frss%2Fmath.NA&showtitle=false&type=html'
+  #   weight: 1
   # - name: Projects
   #   url: '#projects'
   #   weight: 50
