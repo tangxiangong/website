@@ -9,7 +9,7 @@ appearance:
   theme_day: minimal
   theme_night: minimal
   font: native
-  font_size: L
+  font_size: M
 
 # SEO
 
@@ -89,12 +89,12 @@ features:
       category: ''
       category_id: ''
   search:
-    provider: wowchemy
+    provider: algolia
     algolia:
-      app_id: ''
-      api_key: ''
-      index_name: ''
-      show_logo: false
+      app_id: '5I908OUMWD'
+      api_key: 'a7e9103646931c4a2bd6ee12647b77eb'
+      index_name: 'tangxiangong'
+      show_logo: true
   map:
     provider: ''
     api_key: ''
