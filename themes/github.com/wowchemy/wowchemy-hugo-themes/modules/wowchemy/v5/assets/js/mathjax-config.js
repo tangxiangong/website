@@ -9,6 +9,7 @@ window.MathJax = {
     ignoreHtmlClass: 'markmap',
   },
   tex: {
+    tags: 'ams',
     inlineMath: [
       ['$', '$'],
       ['\\(', '\\)'],

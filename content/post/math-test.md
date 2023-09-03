@@ -9,7 +9,7 @@ categories: []
 date: 2023-08-21T21:31:30+08:00
 lastmod: 2023-08-22T10:31:30+08:00
 featured: false
-draft: true
+draft: false  
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -33,7 +33,12 @@ projects: []
 - **常用的数学字体**: $\mathbb{R}$, $\mathcal{L}$, $\mathscr{F}$ ...
 - **其他**:  
   - $\cdots$, $\pm$, $\partial$, $\lVert\cdot\rVert$, ...
-  - $\bar{u}$, $\widehat{w}$, $\widetilde{\partial}$, ...$$
+  - $\bar{u}$, $\widehat{w}$, $\widetilde{\partial}$, ...
 
+{{< math >}}
 $$
-  
+\begin{equation}
+a_2+b_2=c_2.
+\end{equation}
+$$
+{{< /math >}}  
