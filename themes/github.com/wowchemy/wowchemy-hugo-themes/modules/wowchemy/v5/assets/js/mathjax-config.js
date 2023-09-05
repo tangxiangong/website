@@ -19,9 +19,13 @@ window.MathJax = {
       ['\\[', '\\]'],
     ],
     processEscapes: false,
-    packages: {'[+]': ['noerrors']},
+    packages: {'[+]': ['noerrors', 'physics']},
+    physics: {
+      italicdiff: false,
+      arrowdel: false
+    }
   },
   loader: {
-    load: ['[tex]/noerrors'],
+    load: ['[tex]/noerrors', '[tex]/physics'],
   },
 };

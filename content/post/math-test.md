@@ -41,4 +41,10 @@ $$
 a_2+b_2=c_2.
 \end{equation}
 $$
-{{< /math >}}  
+{{< /math >}} 
+
+{{< math >}}
+\begin{equation}
+\norm{\frac{\differential }{\differential x}f}
+\end{equation}
+{{< /math >}}
